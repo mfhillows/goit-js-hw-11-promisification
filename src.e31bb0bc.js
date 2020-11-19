@@ -128,8 +128,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var delay = function delay(ms) {
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
-      resolve("".concat(ms)), ms;
-    });
+      resolve("".concat(ms));
+    }, ms);
   });
 };
 
@@ -249,7 +249,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50071" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50209" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
